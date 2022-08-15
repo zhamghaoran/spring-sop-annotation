@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
+    <!--    AOP的注意事项：
+            目标类和切面类都需要交给IOC容器管理
+            切面类必须通过@Aspect标识为一个切面
+            在spring的配置文件中设置<aop:aspectj-autoproxy/>开启基于注释的AOP
+   -->
+    <context:component-scan base-package="com.zhr.spring.aop.annotation"/>
+    <!--开启基于注解的AOP功能-->
+    <aop:aspectj-autoproxy/>
 
 </beans>

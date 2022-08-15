@@ -1,4 +1,7 @@
-package com.zhr.spring.proxy;
+package com.zhr.spring.aop.annotation;
+
+import org.springframework.stereotype.Component;
+
 
 public interface Calculator {
     int add(int i,int j);

@@ -1,5 +1,8 @@
-package com.zhr.spring.proxy;
+package com.zhr.spring.aop.annotation;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class CalculatorImpl implements Calculator {
     @Override
     public int add(int i, int j) {
