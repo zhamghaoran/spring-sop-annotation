@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Aspect
-@Order(1) // 切面的优先级
+@Order(1) // 切面的优先级,越小优先级越高，默认值为int的最大值
 public class ValidateAspect {
 //    @Pointcut("execution(* com.zhr.spring.aop.annotation.CalculatorImpl.*(..))")
 //    public void pointCut(){}

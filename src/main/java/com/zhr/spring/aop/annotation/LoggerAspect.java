@@ -39,6 +39,10 @@ import java.util.Arrays;
  * Signature signature = joinPoint.getSignature();
  * //获取连接点所对应的方法的参数
  * Object[] args = joinPoint.getArgs();
+ *
+ * 切面的优先级：
+ * {@code @Order属性来设置优先级，默认值为int的最大值，越小优先级越高}
+ *
  */
 @Component
 @Aspect // 将当前组件标识为切面
